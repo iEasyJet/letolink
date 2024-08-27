@@ -1,0 +1,190 @@
+@use '../../utils/var.scss' as var;
+@use '../../utils/mixin.scss' as mixin;
+@use '../../utils/color.scss' as color;
+
+.bet {
+  padding: 0 32px;
+
+  &__wrapper-1 {
+    max-width: var.$defaultWidth;
+    width: 100%;
+    margin: 100px auto 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 32px;
+  }
+
+  &__wrapper-2 {
+    width: 100%;
+    min-height: 68px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__title {
+    @include mixin.fonts(
+      $ff: Poppins,
+      $fw: 700,
+      $fz: 52px,
+      $lh: 130%,
+      $c: color.$colorT4
+    );
+  }
+
+  &__wrapper-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+  }
+
+  &__button {
+    min-width: 52px;
+    min-height: 52px;
+    background-color: color.$colorBG5;
+
+    border-radius: 50%;
+    border: none;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: all 0.2 linear;
+
+    &:hover {
+      cursor: pointer;
+      opacity: 0.7;
+    }
+  }
+
+  &__wrapper-cards {
+  }
+
+  &__item {
+    width: 520px;
+    min-height: 337px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+
+    background-color: color.$colorBG5;
+
+    border-radius: 24px;
+    border: none;
+  }
+
+  &__wrapper-item-text {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  &__item-title {
+    @include mixin.fonts(
+      $ff: Poppins,
+      $fw: 700,
+      $fz: 18px,
+      $lh: 130%,
+      $c: color.$colorT4
+    );
+  }
+
+  &__item-time {
+    @include mixin.fonts(
+      $ff: Inter,
+      $fw: 500,
+      $fz: 14px,
+      $lh: 160%,
+      $c: color.$colorT2
+    );
+  }
+
+  &__wrapper-teams {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 36.5px;
+  }
+
+  &__wrapper-team {
+    height: 72px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+
+  &__img-team {
+    width: 48px;
+    height: 62px;
+  }
+
+  &__container {
+    width: 105px;
+  }
+
+  &__title-team {
+    @include mixin.fonts(
+      $ff: Poppins,
+      $fw: 700,
+      $fz: 18px,
+      $lh: 130%,
+      $c: color.$colorT4
+    );
+  }
+
+  &__prim {
+    @include mixin.fonts(
+      $ff: Inter,
+      $fw: 500,
+      $fz: 14px,
+      $lh: 160%,
+      $c: color.$colorT2
+    );
+  }
+
+  &__vs-team {
+    display: block;
+    width: 36px;
+    height: 29px;
+  }
+
+  &__item-link {
+    width: 456px;
+    height: 60px;
+
+    background-color: color.$colorBG6;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 100px;
+    border: none;
+
+    @include mixin.fonts(
+      $ff: Poppins,
+      $fw: 600,
+      $fz: 18px,
+      $lh: 120%,
+      $c: color.$colorT3
+    );
+
+    transition: all 0.2s linear;
+
+    &:hover {
+      cursor: pointer;
+      opacity: 0.7;
+    }
+  }
+}
