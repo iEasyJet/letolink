@@ -1,23 +1,26 @@
 import { createUnversalSlider } from '../UniversalSlider/UniversalSlider';
+import client from '../../imgs/review/client.png';
+import plus from '../../imgs/review/starPlus.png';
+import minus from '../../imgs/review/starMinus.png';
 
 const arrItemReview = [
   {
     name: 'Rajesh K',
-    img: './src/imgs/review/client.png',
+    img: client,
     text: `I’ve tried several betting apps, but this one stands out. The live
             betting feature is excellent, and the customer support is
             responsive. Great bonuses too. Very satisfied!`,
   },
   {
     name: 'Rajesh K',
-    img: './src/imgs/review/client.png',
+    img: client,
     text: `I’ve tried several betting apps, but this one stands out. The live
             betting feature is excellent, and the customer support is
             responsive. Great bonuses too. Very satisfied!`,
   },
   {
     name: 'Rajesh K',
-    img: './src/imgs/review/client.png',
+    img: client,
     text: `I’ve tried several betting apps, but this one stands out. The live
             betting feature is excellent, and the customer support is
             responsive. Great bonuses too. Very satisfied!`,
@@ -39,35 +42,35 @@ function createItemReview() {
             <li class="review__item-star">
               <img
                 class="review__item-star-img"
-                src="./src/imgs/review/starPlus.png"
+                src=${plus}
                 alt="star"
               />
             </li>
             <li class="review__item-star">
               <img
                 class="review__item-star-img"
-                src="./src/imgs/review/starPlus.png"
+                src=${plus}
                 alt="star"
               />
             </li>
             <li class="review__item-star">
               <img
                 class="review__item-star-img"
-                src="./src/imgs/review/starPlus.png"
+                src=${plus}
                 alt="star"
               />
             </li>
             <li class="review__item-star">
               <img
                 class="review__item-star-img"
-                src="./src/imgs/review/starPlus.png"
+                src=${plus}
                 alt="star"
               />
             </li>
             <li class="review__item-star">
               <img
                 class="review__item-star-img"
-                src="./src/imgs/review/starMinus.png"
+                src=${minus}
                 alt="star"
               />
             </li>

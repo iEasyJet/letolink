@@ -1,35 +1,44 @@
+import apple from '../../imgs/modelPhone/apple.png';
+import honor from '../../imgs/modelPhone/honor.png';
+import htc from '../../imgs/modelPhone/htc.png';
+import huawei from '../../imgs/modelPhone/huawei.png';
+import lg from '../../imgs/modelPhone/lg.png';
+import samsung from '../../imgs/modelPhone/samsung.png';
+import vivo from '../../imgs/modelPhone/vivo.png';
+import xiaomi from '../../imgs/modelPhone/xiaomi.png';
+
 const arrItemModelPhone = [
   {
     title: 'apple',
-    imgLink: './src/imgs/modelPhone/apple.png',
+    imgLink: apple,
   },
   {
     title: 'honor',
-    imgLink: './src/imgs/modelPhone/honor.png',
+    imgLink: honor,
   },
   {
     title: 'htc',
-    imgLink: './src/imgs/modelPhone/htc.png',
+    imgLink: htc,
   },
   {
     title: 'huawei',
-    imgLink: './src/imgs/modelPhone/huawei.png',
+    imgLink: huawei,
   },
   {
     title: 'lg',
-    imgLink: './src/imgs/modelPhone/lg.png',
+    imgLink: lg,
   },
   {
     title: 'samsung',
-    imgLink: './src/imgs/modelPhone/samsung.png',
+    imgLink: samsung,
   },
   {
     title: 'vivo',
-    imgLink: './src/imgs/modelPhone/vivo.png',
+    imgLink: vivo,
   },
   {
     title: 'xiaomi',
-    imgLink: './src/imgs/modelPhone/xiaomi.png',
+    imgLink: xiaomi,
   },
 ];
 

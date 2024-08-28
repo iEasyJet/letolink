@@ -1,3 +1,6 @@
+import android from '../../imgs/howDown/android.png';
+import ios from '../../imgs/howDown/ios.png';
+
 export const howDown = `
       <section class="how-down">
         <div class="how-down__wrapper-1">
@@ -16,7 +19,7 @@ export const howDown = `
             <div class="how-down__wrapper-card">
               <img
                 class="how-down__img"
-                src="./src/imgs/howDown/android.png"
+                src=${android}
                 alt="download android"
               />
               <div class="how-down__card-text-wrapper">
@@ -47,7 +50,7 @@ export const howDown = `
               </div>
               <img
                 class="how-down__img"
-                src="./src/imgs/howDown/ios.png"
+                src=${ios}
                 alt="download ios"
               />
             </div>

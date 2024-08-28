@@ -1,3 +1,8 @@
+import fb from '../../imgs/footer/facebook.png';
+import x from '../../imgs/footer/x.png';
+import tg from '../../imgs/footer/telegram.png';
+import inst from '../../imgs/footer/instagram.png';
+
 export const footer = `
       <footer class="footer">
         <div class="footer__wrapper-1">
@@ -5,22 +10,22 @@ export const footer = `
             <ul class="footer__list-links">
               <li>
                 <a class="footer__link" href="#"
-                  ><img src="./src/imgs/footer/facebook.png" alt="facebook"
+                  ><img src=${fb} alt="facebook"
                 /></a>
               </li>
               <li>
                 <a class="footer__link" href="#"
-                  ><img src="./src/imgs/footer/x.png" alt="x"
+                  ><img src=${x} alt="x"
                 /></a>
               </li>
               <li>
                 <a class="footer__link" href="#"
-                  ><img src="./src/imgs/footer/telegram.png" alt="elegram"
+                  ><img src=${tg} alt="elegram"
                 /></a>
               </li>
               <li>
                 <a class="footer__link" href="#"
-                  ><img src="./src/imgs/footer/instagram.png" alt="instagram"
+                  ><img src=${inst} alt="instagram"
                 /></a>
               </li>
             </ul>

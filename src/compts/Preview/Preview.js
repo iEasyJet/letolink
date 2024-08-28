@@ -1,3 +1,5 @@
+import previewImg from '../../imgs/preview/preview.png';
+
 export const arrItemPreview = [
   {
     id: 0,
@@ -33,7 +35,7 @@ export const preview = `
           <div class="preview__wrapper-2">
             <img
               class="preview__img"
-              src="./src/imgs/preview/preview.png"
+              src=${previewImg}
               alt="betting"
             />
             <div class="preview__wrapper-3">

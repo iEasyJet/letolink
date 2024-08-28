@@ -1,13 +1,15 @@
 import { createUnversalSlider } from '../UniversalSlider/UniversalSlider';
+import img1 from '../../imgs/bet/logoteam.png';
+import vs from '../../imgs/bet/vs.png';
 
 const arrItemBet = [
   {
     title: 'Rajiv Gandhi International Stadium, Hyderabad',
     time: 'Sunday, May 19 17:30 pm IST',
-    linkLogoTeam1: './src/imgs/bet/logoteam.png',
+    linkLogoTeam1: img1,
     team1: 'Sunreser Hyderabad',
     prim1: '(19.1 OV)',
-    linkLogoTeam2: './src/imgs/bet/logoteam.png',
+    linkLogoTeam2: img1,
     team2: 'Xunreser Hyderabad',
     prim2: '(20.1 OV)',
     link: '#',
@@ -15,10 +17,10 @@ const arrItemBet = [
   {
     title: 'Rajiv Gandhi International Stadium, Hyderabad',
     time: 'Sunday, May 19 17:30 pm IST',
-    linkLogoTeam1: './src/imgs/bet/logoteam.png',
+    linkLogoTeam1: img1,
     team1: 'Sunreser Hyderabad',
     prim1: '(19.1 OV)',
-    linkLogoTeam2: './src/imgs/bet/logoteam.png',
+    linkLogoTeam2: img1,
     team2: 'Xunreser Hyderabad',
     prim2: '(20.1 OV)',
     link: '#',
@@ -26,10 +28,10 @@ const arrItemBet = [
   {
     title: 'Rajiv Gandhi International Stadium, Hyderabad',
     time: 'Sunday, May 19 17:30 pm IST',
-    linkLogoTeam1: './src/imgs/bet/logoteam.png',
+    linkLogoTeam1: img1,
     team1: 'Sunreser Hyderabad',
     prim1: '(19.1 OV)',
-    linkLogoTeam2: './src/imgs/bet/logoteam.png',
+    linkLogoTeam2: img1,
     team2: 'Xunreser Hyderabad',
     prim2: '(20.1 OV)',
     link: '#',
@@ -37,10 +39,10 @@ const arrItemBet = [
   {
     title: 'Rajiv Gandhi International Stadium, Hyderabad',
     time: 'Sunday, May 19 17:30 pm IST',
-    linkLogoTeam1: './src/imgs/bet/logoteam.png',
+    linkLogoTeam1: img1,
     team1: 'Sunreser Hyderabad',
     prim1: '(19.1 OV)',
-    linkLogoTeam2: './src/imgs/bet/logoteam.png',
+    linkLogoTeam2: img1,
     team2: 'Xunreser Hyderabad',
     prim2: '(20.1 OV)',
     link: '#',
@@ -48,10 +50,10 @@ const arrItemBet = [
   {
     title: 'Rajiv Gandhi International Stadium, Hyderabad',
     time: 'Sunday, May 19 17:30 pm IST',
-    linkLogoTeam1: './src/imgs/bet/logoteam.png',
+    linkLogoTeam1: img1,
     team1: 'Sunreser Hyderabad',
     prim1: '(19.1 OV)',
-    linkLogoTeam2: './src/imgs/bet/logoteam.png',
+    linkLogoTeam2: img1,
     team2: 'Xunreser Hyderabad',
     prim2: '(20.1 OV)',
     link: '#',
@@ -82,7 +84,7 @@ function createItemBet() {
                 </div>
                 <img
                   class="bet__vs-team"
-                  src="./src/imgs/bet/vs.png"
+                  src=${vs}
                   alt="vs"
                 />
                 <div class="bet__wrapper-team">
@@ -104,24 +106,4 @@ function createItemBet() {
   return res.join('\n');
 }
 
-/* export const bet = `
-      <section class="bet">
-        <div class="bet__wrapper-1">
-          <div class="bet__wrapper-2">
-            <h2 class="bet__title">IPL Live Cricket Betting</h2>
-            <div class="bet__wrapper-buttons">
-              <button class="bet__button bet__button-left" type="button">
-                <span class="material-symbols-outlined"> chevron_left </span>
-              </button>
-              <button class="bet__button bet__button-right" type="button">
-                <span class="material-symbols-outlined"> chevron_right </span>
-              </button>
-            </div>
-          </div>
-          <ul class="bet__wrapper-cards">
-            ${createItemBet()}
-          </ul>
-        </div>
-      </section>
-`; */
 export const bet = createUnversalSlider('bet', createItemBet());

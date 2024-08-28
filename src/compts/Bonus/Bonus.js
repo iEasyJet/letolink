@@ -1,3 +1,7 @@
+import freebet from '../../imgs/bonus/freebet.png';
+import deposit from '../../imgs/bonus/deposit.png';
+import bonusImg from '../../imgs/bonus/bonus.png';
+
 export const bonus = `
       <section class="bonus">
         <div class="bonus__wrapper-1">
@@ -16,7 +20,7 @@ export const bonus = `
               <li class="bonus__item">
                 <img
                   class="bonus__img-item"
-                  src="./src/imgs/bonus/freebet.png"
+                  src=${freebet}
                   alt="Free bet"
                 />
                 <h4 class="bonus__title-item">Free Bet on Registration</h4>
@@ -29,7 +33,7 @@ export const bonus = `
               <li class="bonus__item">
                 <img
                   class="bonus__img-item"
-                  src="./src/imgs/bonus/deposit.png"
+                  src=${deposit}
                   alt="Deposit"
                 />
                 <h4 class="bonus__title-item">Deposit of 100 dollars</h4>
@@ -42,7 +46,7 @@ export const bonus = `
               <li class="bonus__item">
                 <img
                   class="bonus__img-item"
-                  src="./src/imgs/bonus/bonus.png"
+                  src=${bonusImg}
                   alt="Bonus"
                 />
                 <h4 class="bonus__title-item">50% Bonus on First Deposit</h4>

@@ -1,3 +1,7 @@
+import googlePlay from '../../imgs/download/googlepaly.png';
+import appstore from '../../imgs/download/appstore.png';
+import donload from '../../imgs/download/download.png';
+
 export const download = `
       <section class="download">
         <div class="download__wrapper-1">
@@ -15,14 +19,14 @@ export const download = `
               <li class="download__item">
                 <img
                   class="download__item-icon"
-                  src="./src/imgs/download/googlepaly.png"
+                  src=${googlePlay}
                   alt="Google Play"
                 />
               </li>
               <li class="download__item">
                 <img
                   class="download__item-icon"
-                  src="./src/imgs/download/appstore.png"
+                  src=${appstore}
                   alt="App Store"
                 />
               </li>
@@ -30,7 +34,7 @@ export const download = `
           </div>
           <img
             class="download__img"
-            src="./src/imgs/download/download.png"
+            src=${donload}
             alt="Phone"
           />
         </div>

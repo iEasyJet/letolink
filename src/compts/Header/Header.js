@@ -1,8 +1,10 @@
+import logo from '../../imgs/header/logo.png';
+
 export const header = `
       <header class="header">
         <div class="header__wrapper">
           <a href="#" class="header__link-logo"
-            ><img class="header__logo" src="./src/imgs/header/logo.png" alt="Logo" />BETTING APP</a
+            ><img class="header__logo" src=${logo} alt="Logo" />BETTING APP</a
           >
           <input type="checkbox" id="burger-checkbox" class="header__burger-checkbox">
           <label for="burger-checkbox" class="header__burger"></label>

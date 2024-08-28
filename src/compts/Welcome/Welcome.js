@@ -1,3 +1,6 @@
+import subs from '../../imgs/welcome/subs.png';
+import person from '../../imgs/welcome/person.png';
+
 export const welcome = `
       <section class="welcome">
         <div class="welcome__wrapper">
@@ -17,7 +20,7 @@ export const welcome = `
             <div class="welcome__wrapper-subs">
               <img
                 class="welcome__subs-img"
-                src="./src/imgs/welcome/subs.png"
+                src=${subs}
                 alt="subs"
               />
               <p class="welcome__subs-text">
@@ -27,7 +30,7 @@ export const welcome = `
           </div>
           <img
             class="welcome__subs"
-            src="./src/imgs/welcome/person.png"
+            src=${person}
             alt="Person"
           />
         </div>

@@ -1,9 +1,12 @@
+import check from '../../imgs/mobApp/check.png';
+import mobAp from '../../imgs/mobApp/mob-app.png';
+
 export const mobApp = `
       <section class="mob-app">
         <div class="mob-app__wrapper-1">
           <div class="mob-app__wrapper-2">
             <img
-              src="./src/imgs/mobApp/mob-app.png"
+              src=${mobAp}
               alt="mobile app"
               class="mob-app__img"
             />
@@ -21,7 +24,7 @@ export const mobApp = `
                   <li class="mob-app__item">
                     <img
                       class="mob-app__item-img"
-                      src="./src/imgs/mobApp/check.png"
+                      src=${check}
                       alt="check"
                     />
                     You can place bets on IPL games. You can also play casino
@@ -30,7 +33,7 @@ export const mobApp = `
                   <li class="mob-app__item">
                     <img
                       class="mob-app__item-img"
-                      src="./src/imgs/mobApp/check.png"
+                      src=${check}
                       alt="check"
                     />
                     It offers cricket tips, stats, and predictions.
@@ -38,7 +41,7 @@ export const mobApp = `
                   <li class="mob-app__item">
                     <img
                       class="mob-app__item-img"
-                      src="./src/imgs/mobApp/check.png"
+                      src=${check}
                       alt="check"
                     />
                     There is customer support for your convenience.
