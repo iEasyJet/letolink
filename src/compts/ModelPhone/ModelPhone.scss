@@ -1,0 +1,52 @@
+@use '../../utils/var.scss' as var;
+@use '../../utils/mixin.scss' as mixin;
+@use '../../utils/color.scss' as color;
+
+.model-phone {
+  padding: 24px;
+  &__wrapper {
+    max-width: var.$defaultWidth;
+    min-height: 389px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+
+    margin: 100px auto 0;
+  }
+
+  &__title {
+    max-width: 577px;
+    @include mixin.fonts(
+      $ff: Poppins,
+      $fw: 700,
+      $fz: 52px,
+      $lh: 130%,
+      $c: color.$colorT4
+    );
+  }
+
+  &__list {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+
+    width: 100%;
+
+    overflow-x: scroll;
+    scrollbar-width: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .model-phone {
+    &__wrapper {
+      margin-top: 48px;
+      gap: 24px;
+    }
+
+    &__title {
+      font-size: 32px;
+    }
+  }
+}

@@ -1,0 +1,73 @@
+@use '../../utils/var.scss' as var;
+@use '../../utils/mixin.scss' as mixin;
+@use '../../utils/color.scss' as color;
+
+.review {
+  &__item {
+    min-width: 880px;
+    min-height: 344px;
+    padding: 12px;
+
+    border-radius: 24px;
+    background-color: color.$colorBG5;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+  }
+
+  &__item-title {
+    @include mixin.fonts(
+      $ff: Poppins,
+      $fw: 700,
+      $fz: 24px,
+      $lh: 130%,
+      $c: color.$colorT5
+    );
+  }
+
+  &__stars {
+    margin: 12px 0 20px;
+    list-style: none;
+    display: flex;
+    gap: 8px;
+  }
+
+  &__item-text {
+    @include mixin.fonts(
+      $ff: Inter,
+      $fw: 500,
+      $fz: 18px,
+      $lh: 160%,
+      $c: color.$colorT2
+    );
+  }
+}
+
+@media (max-width: 1024px) {
+  .review {
+    &__item {
+      min-width: 320px;
+      min-height: 338px;
+      flex-direction: column;
+      padding: 24px;
+      gap: 24px;
+    }
+
+    &__client-img {
+      width: 78px;
+      height: 92px;
+      border-radius: 24px;
+    }
+
+    &__item-title {
+      font-size: 20px;
+      text-align: center;
+    }
+
+    &__stars {
+      justify-content: center;
+    }
+  }
+}

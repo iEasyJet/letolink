@@ -1,0 +1,171 @@
+@use '../../utils/var.scss' as var;
+@use '../../utils/mixin.scss' as mixin;
+@use '../../utils/color.scss' as color;
+
+.universal-section {
+  padding: 0 24px;
+  &__wrapper {
+    max-width: var.$defaultWidth;
+    width: 100%;
+
+    margin: 100px auto 0;
+    padding: 64px 52px;
+
+    border-radius: 32px;
+    background-color: color.$colorBG5;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+  }
+
+  &__title {
+    @include mixin.fonts(
+      $ff: Poppins,
+      $fw: 700,
+      $fz: 52px,
+      $lh: 130%,
+      $c: color.$colorT4
+    );
+  }
+
+  &__link {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 256px;
+    height: 60px;
+
+    background-color: color.$colorBG6;
+    border-radius: 100px;
+
+    @include mixin.fonts(
+      $ff: Poppins,
+      $fw: 600,
+      $fz: 18px,
+      $lh: 120%,
+      $c: color.$colorT3
+    );
+
+    text-decoration: none;
+
+    transition: all 0.2s linear;
+
+    &:hover {
+      cursor: pointer;
+      opacity: 0.7;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+  }
+
+  &__item {
+    position: relative;
+    background-color: color.$colorBG4;
+    border-radius: 24px;
+
+    max-width: 1236px;
+    width: 100%;
+    min-height: 95px;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 32px;
+  }
+
+  &__item-button {
+    display: none;
+  }
+
+  &__wrapper-text {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    transition: all 0.2s;
+    max-height: 0;
+    overflow: hidden;
+  }
+
+  & label:before {
+    content: '\002B';
+    transform: rotate(45deg);
+    position: absolute;
+
+    top: 35.5px;
+    right: 32px;
+
+    width: 24px;
+    height: 24px;
+    font-size: 36px;
+    font-weight: bolder;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    transition: all 0.2s;
+  }
+
+  &__item-button:checked + label:before {
+    transform: rotate(0deg);
+  }
+
+  &__item-button:checked + label + &__wrapper-text {
+    max-height: 100%;
+    overflow: visible;
+    transition: all 0.2s;
+  }
+
+  &__item-title {
+    width: 90%;
+    @include mixin.fonts(
+      $ff: Poppins,
+      $fw: 700,
+      $fz: 24px,
+      $lh: 130%,
+      $c: color.$colorT4
+    );
+  }
+
+  &__item-text {
+    @include mixin.fonts(
+      $ff: Inter,
+      $fw: 500,
+      $fz: 18px,
+      $lh: 160%,
+      $c: color.$colorT2
+    );
+  }
+}
+
+@media (max-width: 600px) {
+  .universal-section {
+    &__wrapper {
+      margin-top: 48px;
+      padding: 48px 24px;
+    }
+
+    &__title {
+      font-size: 32px;
+    }
+
+    &__item-title {
+      font-size: 20px;
+    }
+  }
+}

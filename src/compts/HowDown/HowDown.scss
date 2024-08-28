@@ -1,0 +1,167 @@
+@use '../../utils/var.scss' as var;
+@use '../../utils/mixin.scss' as mixin;
+@use '../../utils/color.scss' as color;
+
+.how-down {
+  padding: 0 32px;
+  &__wrapper-1 {
+    max-width: 1856px;
+    width: 100%;
+    margin: 100px auto 0;
+    padding: 100px 24px;
+
+    background-color: color.$colorBG5;
+    border-radius: 32px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__wrapper-2 {
+    max-width: var.$defaultWidth;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  &__wrapper-text {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  &__title {
+    max-width: 560px;
+    @include mixin.fonts(
+      $ff: Poppins,
+      $fw: 700,
+      $fz: 52px,
+      $lh: 130%,
+      $c: color.$colorT4
+    );
+  }
+
+  &__text {
+    max-width: 740px;
+    @include mixin.fonts(
+      $ff: Inter,
+      $fw: 500,
+      $fz: 18px,
+      $lh: 160%,
+      $c: color.$colorT2
+    );
+  }
+
+  &__wrapper-card {
+    padding: 32px;
+    background-color: #ffffff;
+    border-radius: 32px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+  }
+
+  &__img {
+    max-width: 100%;
+  }
+
+  &__card-text-wrapper {
+    max-width: 576px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  &__card-title {
+    @include mixin.fonts(
+      $ff: Poppins,
+      $fw: 700,
+      $fz: 36px,
+      $lh: 130%,
+      $c: color.$colorT4
+    );
+  }
+
+  &__card-text {
+    @include mixin.fonts(
+      $ff: Inter,
+      $fw: 500,
+      $fz: 18px,
+      $lh: 160%,
+      $c: color.$colorT2
+    );
+  }
+
+  &__card-link {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 256px;
+    height: 60px;
+
+    background-color: color.$colorBG6;
+    border-radius: 100px;
+
+    @include mixin.fonts(
+      $ff: Poppins,
+      $fw: 600,
+      $fz: 18px,
+      $lh: 120%,
+      $c: color.$colorT3
+    );
+
+    text-decoration: none;
+
+    transition: all 0.2s linear;
+
+    &:hover {
+      cursor: pointer;
+      opacity: 0.7;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .how-down {
+    &__wrapper-card {
+      flex-direction: column;
+    }
+
+    &__wrapper-card:last-child {
+      flex-direction: column-reverse;
+    }
+
+    &__card-link {
+      align-self: center;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .how-down {
+    &__wrapper-1 {
+      margin-top: 48px;
+      padding: 48px 24px;
+    }
+
+    &__title {
+      font-size: 32px;
+    }
+
+    &__card-title {
+      font-size: 24px;
+    }
+
+    &__card-link {
+      width: 100%;
+    }
+  }
+}

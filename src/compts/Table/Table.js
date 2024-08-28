@@ -56,7 +56,7 @@ const arrNav = [
   },
 ];
 
-function createItem(isWide) {
+function createItemTable(isWide) {
   const res = arrNav
     .filter((el) => {
       return el.classIsWide === isWide;
@@ -82,10 +82,10 @@ export const table = `
           </div>
           <nav class="table__content">
             <ul class="table__list table__list-wide">
-              ${createItem(true)}
+              ${createItemTable(true)}
             </ul>
             <ul class="table__list table__list-narrow">
-              ${createItem(false)}
+              ${createItemTable(false)}
             </ul>
           </nav>
         </div>

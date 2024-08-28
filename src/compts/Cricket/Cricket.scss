@@ -1,0 +1,138 @@
+@use '../../utils/var.scss' as var;
+@use '../../utils/mixin.scss' as mixin;
+@use '../../utils/color.scss' as color;
+/*     @include mixin.fonts(
+      $ff: Poppins,
+      $fw: 700,
+      $fz: 52px,
+      $lh: 130%,
+      $c: color.$colorT4
+    ); */
+
+.cricket {
+  padding: 0 32px;
+  &__wrapper-1 {
+    max-width: 1856px;
+    width: 100%;
+    margin: 100px auto 0;
+    padding: 100px 24px;
+
+    background-color: color.$colorBG3;
+    border-radius: 32px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__wrapper-2 {
+    max-width: var.$defaultWidth;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 64px;
+  }
+
+  &__title {
+    @include mixin.fonts(
+      $ff: Poppins,
+      $fw: 700,
+      $fz: 52px,
+      $lh: 130%,
+      $c: color.$colorT3
+    );
+  }
+
+  &__list {
+    width: 100%;
+    padding: 64px 52px;
+    list-style: none;
+    background-color: color.$colorBG1;
+    border-radius: 32px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 4px;
+
+    overflow-x: scroll;
+    scrollbar-width: none;
+  }
+
+  &__item {
+    padding: 0 40px;
+    width: 1236px;
+    height: 93px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: color.$colorBG3;
+
+    border-radius: 32px;
+  }
+
+  &__item-wrapper {
+    width: 65%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item-title {
+    @include mixin.fonts(
+      $ff: Poppins,
+      $fw: 600,
+      $fz: 20px,
+      $lh: 120%,
+      $c: color.$colorT3
+    );
+  }
+
+  &__item-text {
+    @include mixin.fonts(
+      $ff: Inter,
+      $fw: 500,
+      $fz: 18px,
+      $lh: 160%,
+      $c: color.$colorT3
+    );
+  }
+
+  &__item-order {
+    @include mixin.fonts(
+      $ff: Inter,
+      $fw: 500,
+      $fz: 18px,
+      $lh: 160%,
+      $c: color.$colorT3
+    );
+  }
+}
+
+@media (max-width: 600px) {
+  .cricket {
+    &__wrapper-1 {
+      margin-top: 48px;
+      padding: 48px 24px;
+      gap: 24px;
+    }
+
+    &__wrapper-2 {
+      gap: 24px;
+    }
+
+    &__title {
+      font-size: 32px;
+    }
+
+    &__list {
+      padding: 12px;
+    }
+
+    &__item-title {
+      font-size: 16px;
+    }
+  }
+}

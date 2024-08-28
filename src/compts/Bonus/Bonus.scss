@@ -1,0 +1,147 @@
+@use '../../utils/var.scss' as var;
+@use '../../utils/mixin.scss' as mixin;
+@use '../../utils/color.scss' as color;
+
+.bonus {
+  padding: 0 32px;
+
+  &__wrapper-1 {
+    max-width: 1856px;
+    width: 100%;
+    min-height: 732px;
+    margin: 100px auto 0;
+    padding: 100px 24px;
+
+    background-color: color.$colorBG3;
+    border-radius: 32px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__wrapper-2 {
+    max-width: var.$defaultWidth;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 64px;
+  }
+
+  &__wrapper-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  &__title {
+    text-align: center;
+    @include mixin.fonts(
+      $ff: Poppins,
+      $fw: 700,
+      $fz: 52px,
+      $lh: 130%,
+      $c: color.$colorT3
+    );
+  }
+
+  &__text {
+    text-align: center;
+    @include mixin.fonts(
+      $ff: Inter,
+      $fw: 500,
+      $fz: 18px,
+      $lh: 160%,
+      $c: color.$colorT2
+    );
+  }
+
+  &__list {
+    list-style-type: none;
+
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  &__item {
+    width: 433px;
+    height: 310px;
+
+    background-color: color.$colorBG2;
+    border-radius: 24px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  &__title-item {
+    text-align: center;
+    @include mixin.fonts(
+      $ff: Poppins,
+      $fw: 700,
+      $fz: 24px,
+      $lh: 130%,
+      $c: color.$colorT3
+    );
+  }
+
+  &__text-item {
+    width: 347px;
+    text-align: center;
+    @include mixin.fonts(
+      $ff: Inter,
+      $fw: 500,
+      $fz: 18px,
+      $lh: 160%,
+      $c: color.$colorT2
+    );
+  }
+}
+
+@media (max-width: 600px) {
+  .bonus {
+    &__wrapper-1 {
+      margin-top: 48px;
+      padding: 48px 24px;
+    }
+
+    &__wrapper-2 {
+      gap: 48px;
+    }
+
+    &__wrapper-text {
+      gap: 24px;
+    }
+
+    &__list {
+      gap: 24px;
+    }
+
+    &__title {
+      font-size: 32px;
+    }
+
+    &__title-item {
+      font-size: 20px;
+    }
+    &__text-item {
+      width: 300px;
+    }
+
+    &__item {
+      width: 334px;
+      height: 289px;
+    }
+  }
+}
