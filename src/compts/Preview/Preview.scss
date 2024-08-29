@@ -64,12 +64,14 @@
       $c: color.$colorT2
     );
     max-width: 660px;
+    min-height: 150px;
   }
 
   &__wrapper-slider {
     display: flex;
     justify-content: space-between;
     gap: 24px;
+    transition: all 0.2 linear;
   }
 
   &__button {
@@ -114,6 +116,10 @@
   }
 }
 
+.animation {
+  animation: animation 1.5s 1;
+}
+
 @media (max-width: 1280px) {
   .preview {
     &__wrapper-2 {
@@ -149,5 +155,14 @@
     &__wrapper-3 {
       gap: 48px;
     }
+  }
+}
+
+@keyframes animation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }

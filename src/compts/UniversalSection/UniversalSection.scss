@@ -93,10 +93,9 @@
   &__wrapper-text {
     display: flex;
     flex-direction: column;
-    gap: 24px;
-    transition: all 0.2s;
-    max-height: 0;
-    overflow: hidden;
+    gap: 0px;
+
+    transition: all 0.5s linear;
   }
 
   & label:before {
@@ -125,12 +124,6 @@
     transform: rotate(0deg);
   }
 
-  &__item-button:checked + label + &__wrapper-text {
-    max-height: 100%;
-    overflow: visible;
-    transition: all 0.2s;
-  }
-
   &__item-title {
     width: 90%;
     @include mixin.fonts(
@@ -150,6 +143,22 @@
       $lh: 160%,
       $c: color.$colorT2
     );
+
+    max-height: 0;
+    overflow: hidden;
+
+    transition: all 0.2s linear;
+  }
+
+  &__item-button:checked + label ~ &__wrapper-text &__item-text {
+    max-height: 200px;
+    overflow: visible;
+    transition: all 0.2s linear;
+  }
+
+  &__item-button:checked + label ~ &__wrapper-text {
+    gap: 24px;
+    transition: all 0.5s linear;
   }
 }
 

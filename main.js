@@ -56,12 +56,20 @@ const previewLeftArrow = document.querySelector('.preview__button-left');
 const previewRightArrow = document.querySelector('.preview__button-right');
 const previewList = document.querySelector('.preview__list');
 
-function changeContentPreview(value) {
+async function changeContentPreview(value) {
+  previewTitle.classList.remove('animation');
+  previewText.classList.remove('animation');
+
   previewTitle.textContent = arrItemPreview[value].title;
   previewText.textContent = arrItemPreview[value].text;
 
   previewTitle.dataset.id = arrItemPreview[value].id;
   previewText.dataset.id = arrItemPreview[value].id;
+
+  await setTimeout(() => {
+    previewTitle.classList.add('animation');
+    previewText.classList.add('animation');
+  }, 0);
 
   previewList.innerHTML = createItemPreview(arrItemPreview, value);
 }
@@ -107,13 +115,21 @@ betList.addEventListener('wheel', (event) => {
 });
 
 betLeftArrow.addEventListener('click', () => {
-  const betCardWidth = document.querySelector('.bet__item').clientWidth / 2;
-  betList.scrollLeft -= betCardWidth;
+  const betCardWidth = document.querySelector('.bet__item').clientWidth;
+  /* betList.scrollLeft -= betCardWidth; */
+  betList.scrollBy({
+    left: -betCardWidth,
+    behavior: 'smooth',
+  });
 });
 
 betRightArrow.addEventListener('click', () => {
-  const betCardWidth = document.querySelector('.bet__item').clientWidth / 2;
-  betList.scrollLeft += betCardWidth;
+  const betCardWidth = document.querySelector('.bet__item').clientWidth;
+  /* betList.scrollLeft += betCardWidth; */
+  betList.scrollBy({
+    left: betCardWidth,
+    behavior: 'smooth',
+  });
 });
 /*  */
 const reviewList = document.querySelector('.review__wrapper-cards');
@@ -129,15 +145,21 @@ reviewList.addEventListener('wheel', (event) => {
 });
 
 reviewLeftArrow.addEventListener('click', () => {
-  const reviewCardWidth =
-    document.querySelector('.review__item').clientWidth / 2;
-  reviewList.scrollLeft -= reviewCardWidth;
+  const reviewCardWidth = document.querySelector('.review__item').clientWidth;
+  /* reviewList.scrollLeft -= reviewCardWidth; */
+  reviewList.scrollBy({
+    left: -reviewCardWidth,
+    behavior: 'smooth',
+  });
 });
 
 reviewRightArrow.addEventListener('click', () => {
-  const reviewCardWidth =
-    document.querySelector('.review__item').clientWidth / 2;
-  reviewList.scrollLeft += reviewCardWidth;
+  const reviewCardWidth = document.querySelector('.review__item').clientWidth;
+  /* reviewList.scrollLeft += reviewCardWidth; */
+  reviewList.scrollBy({
+    left: reviewCardWidth,
+    behavior: 'smooth',
+  });
 });
 /*  */
 const modelPhoneList1 = document.querySelector('.model-phone__list-1');

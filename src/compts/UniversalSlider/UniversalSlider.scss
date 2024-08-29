@@ -71,6 +71,8 @@
 
     overflow-x: scroll;
     scrollbar-width: none;
+
+    transition: all 0.2s linear;
   }
 
   &__item {

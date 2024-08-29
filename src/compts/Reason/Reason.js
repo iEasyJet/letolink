@@ -4,7 +4,7 @@ export const reason = `
           <h2 class="universal-section__title">Reasons to Download IPL App</h2>
           <ul class="universal-section__list">
             <li class="universal-section__item">
-              <input
+            <input
                 class="universal-section__item-button"
                 type="checkbox"
                 name="acor"
